@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu yang Berharga</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffe5ec;
+            color: #4a4a4a;
+            overflow: hidden;
+        }
+
+        /* Container Slide */
+        .slider-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.8s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        /* Slide Aktif + Animasi Masuk */
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        /* Komponen Visual */
+        .title {
+            font-size: 2rem;
+            color: #ff4d6d;
+            margin-bottom: 15px;
+            font-weight: bold;
+            animation: fadeInDown 1s ease;
+        }
+
+        .photo-frame {
+            width: 280px;
+            height: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            border: 5px solid white;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quotes {
+            font-size: 1.1rem;
+            max-width: 500px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease;
+        }
+
+        /* Tombol Navigasi di Bawah */
+        .btn-container {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .next-btn {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .next-btn:hover {
+            background-color: #ff758f;
+            transform: translateY(-2px);
+        }
+
+        /* Animasi CSS */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        
+        <!-- SLIDE 1: AWALAN -->
+        <div class="slide active">
+            <h1 class="title">Hai, Kamu...</h1>
+            <p class="quotes">Ada sebuah pesan singkat yang ingin aku sampaikan. Tolong buka dan baca pelan-pelan ya? 😊</p>
+        </div>
+
+        <!-- SLIDE 2: FOTO 1 -->
+        <div class="slide">
+            <h2 class="title">Moment yang aku inginkan</h2>
+            <div class="photo-frame">
+                <!-- Ganti link gambar di bawah dengan foto pasanganmu -->
+                <img src="foto1.jpeg" alt="Foto 1">
+            </div>
+            <p class="quotes">"Aku sangat bersyukur bisa bertemu dengan wanita sepertimu. Kehadiranmu membawa warna baru di hidupku."</p>
+        </div>
+
+        <!-- SLIDE 3: FOTO 2 -->
+        <div class="slide">
+            <h2 class="title">Princesss akuuu</h2>
+            <div class="photo-frame">
+                <img src="foto2.jpeg" alt="Foto 2">
+            </div>
+            <p class="quotes">"Bersyukur banget Tuhan mempertemukan aku dengan wanita sehebat dan sebaik kamu."</p>
+        </div>
+
+        <!-- SLIDE 4: FOTO 3 -->
+        <div class="slide">
+            <h2 class="title">Kesayangan akuuu</h2>
+            <div class="photo-frame">
+                <img src="foto3.jpeg" alt="Foto 3">
+            </div>
+            <p class="quotes">"Bertemu denganmu adalah anugerah terindah. Kamu jawaban dari doa-doaku."</p>
+        </div>
+
+        <!-- SLIDE 5: FOTO 4 -->
+        <div class="slide">
+            <h2 class="title">My loveee</h2>
+            <div class="photo-frame">
+                <img src="foto4.jpeg" alt="Foto 4">
+            </div>
+            <p class="quotes">"Terima kasih sudah menjadi bagian terindah dalam hidupku. Aku sangat sayang kamuu."</p>
+        </div>
+
+        <!-- SLIDE 6: pesan -->
+        <div class="slide">
+            <h1 class="title">Pesan Semesta Untukmu ❤️</h1>
+            <p class="quotes">"sayang, makasih yah udah bertahan sama aku, aku harap kita bisa selalu besama yah, dan aku harap kamu dan aku tetap selalu bersama kedepan nya dan selamanya, makasih udah sama laki laki yang banyak kurang nya ini aku harap kamu bisa bertahan sama aku yah, dengan datang nya kamu di kehidupan aku, aku merasa semua jauh lebih baik dari sebelum nya, aku harap masa kita berdua gak akan ada habis nya yah sayang."</p>
+        </div>
+
+       <!-- SLIDE 7: pesan-penutup -->
+        <div class="slide">
+            <h1 class="title">Pesan Semesta Untukmu ❤️</h1>
+            <p class="quotes">"terus terus sama aku yah sayang selamanyaa oteyyy, akuu sayangg bangett sama kamuu, aku gamau kehilangan kamuu, makasihh sudah dateng kedalam hidup kuu, makasih sudah ngebikin aku merasa di sayang dan di peduliin banget, aku janji aku akan bahagia in kamu dan aku gak akan ninggalin kamu dalam. keadaan apapun, aku janji aku bakal berusaha dan berjuang untuk wanita yang menemanim aku saat inii, tetap jadii wanita kesayangan aku yahh sayangg, akuu sayang banget sama kamu, jangan pergi dari aku yahhh, 
+i love you...."</p>
+        </div>
+
+
+        <!-- TOMBOL DI BAWAH -->
+        <div class="btn-container">
+            <button class="next-btn" onclick="nextSlide()">Lanjut ✨</button>
+        </div>
+
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.querySelector('.next-btn');
+
+        function nextSlide() {
+            // Hilangkan kelas aktif dari slide sekarang
+            slides[currentSlide].classList.remove('active');
+            
+            // Pindah ke slide berikutnya
+            currentSlide++;
+            
+            // Jika sudah di slide terakhir, ubah tombol atau kunci slide
+            if (currentSlide === slides.length - 1) {
+                nextBtn.innerText = "Selesai ❤️";
+                nextBtn.style.backgroundColor = "#c9184a";
+            } else if (currentSlide >= slides.length) {
+                alert("Terima kasih sudah membaca sampai akhir! Love you!");
+                currentSlide = 0; // Mengulang dari awal jika diklik lagi
+                nextBtn.innerText = "Lanjut ✨";
+                nextBtn.style.backgroundColor = "#ff4d6d";
+            }
+            
+            // Tampilkan slide baru
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+</body>
+</html>
